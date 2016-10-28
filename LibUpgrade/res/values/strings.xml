@@ -1,0 +1,10 @@
+<resources>
+    <string name="update">更新</string>
+    <string name="cancel">取消</string>
+    <string name="update_tips">更新提示</string>
+    <string name="no_update">已经是最新版本</string>
+    <string name="check_error">检查更新失败</string>
+    <string name="download_error">下载失败</string>
+    <string name="install_error">安装失败</string>
+    <string name="downloading">正在下载中(%1$d%%/%2$d%%)</string>
+</resources>
