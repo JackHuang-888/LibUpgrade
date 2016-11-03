@@ -490,4 +490,8 @@ public class BsDiff {
             }
         });
 ```
+###六、其它二进制差分及合并工具
 
+ - [xdelta3](http://xdelta.org/xdelta3.html)
+ - [javaxdelta](http://javaxdelta.sourceforge.net/)
+ - [courgette](https://chromium.googlesource.com/chromium/src/courgette/)
