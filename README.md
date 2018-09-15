@@ -1,9 +1,9 @@
 > 转载请标明出处
 > 本文出自[HCY的微博](http://my.csdn.net/Huang_Cai_Yuan)
 
-###一、概述
+### 一、概述
 软件更新功能可以说是APP的标配。以前实现这个功能的时候，自己一行一行代码重复撸，浪费时间。所以我决定实现一个万能的可复用的更新库。让它支持增量更新、全量更新、静默安装、普通方式安装、可以自定义UI。下面就来介绍一下我实现这个库的主要技术点：增量更新、静默安装及如何封装。
-###二、软件增量更新处理流程
+### 二、软件增量更新处理流程
 
 #### (1)服务端处理流程
 
@@ -230,7 +230,7 @@ public class BsDiff {
         return "";
     }
 ```
-###四、静默安装实现
+### 四、静默安装实现
 静默安装这里采用pm install命令实现，因此应用需要获取到Root权限才能执行成功。
 
 ```
@@ -286,7 +286,7 @@ public class BsDiff {
     }
 ```
 
-###五、封装
+### 五、封装
 
 为了打造一个可复用的软件更新库，这里根据软件更新的流程抽象了五个接口，流程与接口的对应关系如下：
  1. 更新检测（UpdateChecker）
@@ -297,7 +297,7 @@ public class BsDiff {
  如果使用者发现哪一步不符合自己的需求，只要实现这个步骤的接口并注入到全局配置中即可，从而实现“万能”的软件更新功能。
  具体实现，请参照源码：[https://github.com/Money888/LibUpgrade.git](https://github.com/Money888/LibUpgrade.git)
 
-####(1)更新库的使用
+#### (1)更新库的使用
 第一步，在Application.onCreate方法中进行初始化
 ```
     @Override
@@ -342,7 +342,7 @@ public class BsDiff {
  Updater.getInstance().check(this);
 ```
 
-####(2)自定义功能扩展使用
+#### (2)自定义功能扩展使用
 
 1.增量更新
 
@@ -490,7 +490,7 @@ public class BsDiff {
             }
         });
 ```
-###六、其它二进制差分及合并工具
+### 六、其它二进制差分及合并工具
 
  - [xdelta3](http://xdelta.org/xdelta3.html)
  - [javaxdelta](http://javaxdelta.sourceforge.net/)
